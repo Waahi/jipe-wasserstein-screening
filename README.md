@@ -42,6 +42,19 @@ The scripts that produced the paper's numbers, as opposed to those that build th
 | `strict_controllability.py` | the inventory-identity closure check |
 | `verify_operator_lp.py` | the linear-programme cross-check of the worst-case operator |
 
+The controlled study of Section 4.1 and the fixed-buffer experiment behind the field-study frontiers.
+
+| file | what it does |
+|---|---|
+| `buffer_synth.py` | the synthetic generating process and the constructive regime; `python buffer_synth.py diag 20` writes the five diagnostic rows that are stored as `data/synth_diag.out` |
+| `buffer_reliability.py` | the frozen service-reliability experiment, and the PTH screen itself |
+| `buffer_confirm.py` | the confirmatory recompute behind `data/buffer_confirm_report.json` |
+| `buffer_frontier.py` | the fixed-buffer frontiers and attainable ceilings, `data/buffer_frontiers.json` |
+| `buffer_bootstrap.py` | the matched-budget paired block bootstrap, `data/buffer_bootstrap_report.json` |
+| `gate3_impl.py` | the Gate 3 implementability test against history-only capacity benchmarks |
+| `poscontrol.py` | the positive control; its two-stage run order is enforced by the script itself |
+| `probe_eps_ceiling.py` | the audit of whether the reported ceiling is a real ceiling or an artefact of the radius grid |
+
 ## Reproducing
 
 ```
@@ -50,15 +63,22 @@ cd analysis && python backtest_full.py && cd ..
 python make_numbers.py
 python make_tables.py
 cd figures && python fig1_five_gate_protocol.py && python figs_data.py && python graphical_abstract.py && cd ..
-python build_manuscript.py
 ```
+
+`build_manuscript.py`, `make_submission.py`, `nlm_convert.py` and `make_docx.py` are included so that the
+path from a frozen artefact to a printed number is inspectable, but they are **not** part of the sequence
+above and will not run here: they assemble the manuscript from its prose sources, and those sources are
+not part of a code and data deposit. Everything that produces a reported *number* does run.
 
 `verify_operator_lp400.py`, `lag_sensitivity.py` and `measure_gate_cost.py` are independent of that order.
 Rebuilding the panel from the raw workbooks with `analysis/build_panel.py` requires downloading them
 first; their digests are in `analysis/eia923_hashes.json`.
 
+`data/synth_diag.out` is captured standard output rather than a file a script writes directly. Regenerate
+it with `cd analysis && python buffer_synth.py diag 20 > ../data/synth_diag.out`.
+
 Requires Python 3.10 or later with `numpy`, `scipy`, `pandas`, `matplotlib`, `openpyxl`, `statsmodels`,
-`python-docx`, `python-pptx` and `Pillow`. Tested on numpy 2.4.6, scipy 1.17.1.
+`python-docx`, `python-pptx`, `lxml` and `Pillow`. Tested on numpy 2.4.6, scipy 1.17.1.
 
 ## What the data are
 

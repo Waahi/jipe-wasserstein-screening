@@ -55,6 +55,20 @@ DEPOSIT_CODE = [
     "analysis/backtest_onefold.py", "analysis/backtest_full.py", "analysis/backtest_v2.py",
     "analysis/gate2_bootstrap.py", "analysis/strict_controllability.py",
     "analysis/verify_operator_lp.py",
+    # The controlled study of Section 4.1. Omitted until 2026-08-03 in the same way and for the
+    # same reason as the block above: that rescue caught the field study's branch and missed this
+    # one entirely, so four of the nine frozen artefacts had no producer in the deposit and the
+    # controlled study was not reproducible from it at all.
+    "analysis/buffer_reliability.py", "analysis/buffer_confirm.py",
+    "analysis/buffer_bootstrap.py", "analysis/buffer_frontier.py",
+    "analysis/buffer_synth.py", "analysis/gate3_impl.py",
+    "analysis/poscontrol.py", "analysis/probe_eps_ceiling.py",
+    # Imported by scripts already deposited, and therefore not optional: build_manuscript.py
+    # does "import nlm_convert" and make_submission.py does "import make_docx". Without these
+    # two the documented reproduce sequence fails on its first command from a clean extract,
+    # which is exactly what the earlier clean-extract test failed to catch by running only
+    # verify_data.py instead of the sequence the README promises.
+    "nlm_convert.py", "make_docx.py",
     # The derived panel every analysis script reads, so the deposit runs without the 190 MB of
     # raw agency workbooks, plus the digests that tie it back to them.
     "analysis/coal_panel_2015_2024.json", "analysis/eia923_hashes.json",
@@ -273,7 +287,12 @@ def main():
            "- Competing interest: one author sits on this journal's editorial board. Declare it in the",
            "  portal field as well as in the cover letter.",
            "- Open access and APC choice.",
-           "- The analysis-code identifier, once the deposit exists."]
+           "- The analysis-code identifier: **10.5281/zenodo.21766949**. The Zenodo record is a private",
+           "  draft for the duration of double-blind review and is published on acceptance, so the DOI is",
+           "  reserved and does not resolve yet. Supplementary Section S4 says exactly this, so the record",
+           "  must not be published before S4 is updated to match.",
+           "- Proof sign-off: recorded as approved by Goto. See SIGNOFF_PACKET.md and, if the mathematics",
+           "  changes after this point, re-run verify_signoff.py before relying on that approval."]
     io.open(os.path.join(PKG, "UPLOAD_CHECKLIST.md"), "w", encoding="utf-8").write("\n".join(ck) + "\n")
     copied.append("UPLOAD_CHECKLIST.md")
 

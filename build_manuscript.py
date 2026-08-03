@@ -204,7 +204,8 @@ and approved the final manuscript.
 
 **Data availability.** The agency data are public. Supplementary Section S4 gives the download location,
 retrieval date and SHA-256 digest of every input file, together with the sample flow. The build and
-analysis code is deposited at submission and its identifier recorded in Supplementary Section S4. No
+analysis code is archived and its DOI, digest and release condition are recorded in Supplementary
+Section S4. No
 suppressed cell is reconstructed and no early-release file contributes to a reported number, so the
 early-release aggregation restriction is not engaged.""",
 ]
@@ -400,7 +401,8 @@ identifiable personal information.
 
 **Data availability.** The agency data are public. Supplementary Section S4 gives the download location,
 retrieval date and SHA-256 digest of every input file, together with the sample flow. The build and
-analysis code is deposited at submission and its identifier given in the title page file. No suppressed
+analysis code is archived and its DOI, digest and release condition are recorded in Supplementary
+Section S4. No suppressed
 cell is reconstructed and no early-release file contributes to a reported number, so the early-release
 aggregation restriction is not engaged.""" + _anon[_decl_b:]
 
@@ -435,8 +437,27 @@ provenance, the superseded analysis and the full statement of the prospective hy
 three tables of detail that the main text reports in summary. Its reference list is separate from the
 main one and separately numbered, so a work cited in both appears in both."""]
 
+# S4 quotes the deposit's digest and file count. Those were hand-written, and a hand-written
+# digest is a digest that goes stale: the archive gained ten files on 2026-08-03 and the
+# appendix would have kept naming the old one, so the paper would have pointed a reader at a
+# checksum that no longer matched the file they downloaded. Substitute from the builder's own
+# output instead, and fail rather than ship an unresolved placeholder.
+_dig = os.path.join(D, "DEPOSIT_DIGEST.txt")
+if not os.path.exists(_dig):
+    raise SystemExit("DEPOSIT_DIGEST.txt absent; run make_deposit.py before building the supplement")
+_dtxt = io.open(_dig, encoding="utf-8").read()
+_DEPOSIT = {
+    "DEPOSIT_SHA256": re.match(r"([0-9a-f]{64})", _dtxt).group(1),
+    "DEPOSIT_NFILES": re.search(r"(\d+) files", _dtxt).group(1),
+}
+
 for tag, fname, title, nsub in SMAP:
     body = load(fname).split("\n", 1)[1].strip()
+    for _k, _v in _DEPOSIT.items():
+        body = body.replace("{{%s}}" % _k, _v)
+    if "{{" in body:
+        raise SystemExit(f"{fname} has an unresolved placeholder: "
+                         + re.search(r"\{\{[^}]*\}\}", body).group(0))
     # APPENDIX_E carries both a file title and its own section heading, so dropping only the first
     # line leaves a stray "# Appendix E" inside S5.
     body = re.sub(r"\A#\s*Appendix\s+[A-E][^\n]*\n+", "", body).strip()
