@@ -1,0 +1,38 @@
+{
+  "0": {
+    "lag_months": 0,
+    "radius": 0.0,
+    "n_origins": 35,
+    "mean_diff": -5.031637076857125e-17,
+    "ci": [
+      -7.055756861555184e-17,
+      -3.207552108963817e-17
+    ],
+    "mean_inventory_candidate": 1.6615240805663896,
+    "mean_inventory_comparator": 1.661524080566388
+  },
+  "13": {
+    "lag_months": 13,
+    "radius": 0.01,
+    "n_origins": 35,
+    "mean_diff": -0.0007512554307164847,
+    "ci": [
+      -0.0014164753831353138,
+      -0.00022603121919973886
+    ],
+    "mean_inventory_candidate": 1.9141205830727581,
+    "mean_inventory_comparator": 1.9268821522549184
+  },
+  "24": {
+    "lag_months": 24,
+    "radius": 0.01,
+    "n_origins": 35,
+    "mean_diff": -0.0006892291779878719,
+    "ci": [
+      -0.0011261104982746065,
+      -0.0002833822107990506
+    ],
+    "mean_inventory_candidate": 1.852896626538585,
+    "mean_inventory_comparator": 1.8743850701561748
+  }
+}

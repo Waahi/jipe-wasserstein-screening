@@ -1,0 +1,191 @@
+{
+ "meta": {
+  "win": 48,
+  "n_plant_origins": 6606,
+  "day_targets": [
+   57,
+   60,
+   63
+  ],
+  "saa_ceil_days": 56
+ },
+ "per_target": {
+  "57": {
+   "N": 6606,
+   "already_above": 4646,
+   "binding": {
+    "Routine": 5002,
+    "Exceptional": 354,
+    "Unsupported": 1250
+   },
+   "storage": {
+    "Routine": 5780,
+    "Exceptional": 158,
+    "Unsupported": 668
+   },
+   "net_build": {
+    "Routine": 5309,
+    "Exceptional": 216,
+    "Unsupported": 1081
+   },
+   "throughput": {
+    "Routine": 5105,
+    "Exceptional": 366,
+    "Unsupported": 1135
+   },
+   "days_env": {
+    "Routine": 5780,
+    "Exceptional": 158,
+    "Unsupported": 668
+   },
+   "n_needing_build": 1960,
+   "binding_needers": {
+    "Routine": 396,
+    "Exceptional": 314,
+    "Unsupported": 1250
+   },
+   "n_new_action": 2825,
+   "n_moot": 3781,
+   "n_saa_ge_target": 1392,
+   "binding_new_action": {
+    "Routine": 1407,
+    "Exceptional": 290,
+    "Unsupported": 1128
+   },
+   "n_maintenance": 1072,
+   "binding_maintenance": {
+    "Routine": 1069,
+    "Exceptional": 3,
+    "Unsupported": 0
+   },
+   "n_pilebuild": 1753,
+   "binding_pilebuild": {
+    "Routine": 338,
+    "Exceptional": 287,
+    "Unsupported": 1128
+   },
+   "frac_multi_month_p90_pilebuild": 0.6674272675413577,
+   "frac_multi_month_p90": 0.661734693877551,
+   "min_months_p90_median": 1.6992570691039144,
+   "min_months_p90_p90": 15.756907584379046
+  },
+  "60": {
+   "N": 6606,
+   "already_above": 4506,
+   "binding": {
+    "Routine": 4858,
+    "Exceptional": 396,
+    "Unsupported": 1352
+   },
+   "storage": {
+    "Routine": 5699,
+    "Exceptional": 195,
+    "Unsupported": 712
+   },
+   "net_build": {
+    "Routine": 5195,
+    "Exceptional": 222,
+    "Unsupported": 1189
+   },
+   "throughput": {
+    "Routine": 4972,
+    "Exceptional": 406,
+    "Unsupported": 1228
+   },
+   "days_env": {
+    "Routine": 5699,
+    "Exceptional": 195,
+    "Unsupported": 712
+   },
+   "n_needing_build": 2100,
+   "binding_needers": {
+    "Routine": 393,
+    "Exceptional": 355,
+    "Unsupported": 1352
+   },
+   "n_new_action": 3002,
+   "n_moot": 3604,
+   "n_saa_ge_target": 1108,
+   "binding_new_action": {
+    "Routine": 1424,
+    "Exceptional": 344,
+    "Unsupported": 1234
+   },
+   "n_maintenance": 1072,
+   "binding_maintenance": {
+    "Routine": 1070,
+    "Exceptional": 2,
+    "Unsupported": 0
+   },
+   "n_pilebuild": 1930,
+   "binding_pilebuild": {
+    "Routine": 354,
+    "Exceptional": 342,
+    "Unsupported": 1234
+   },
+   "frac_multi_month_p90_pilebuild": 0.6740932642487046,
+   "frac_multi_month_p90": 0.6719047619047619,
+   "min_months_p90_median": 1.7565157326724286,
+   "min_months_p90_p90": 15.605427175523792
+  },
+  "63": {
+   "N": 6606,
+   "already_above": 4369,
+   "binding": {
+    "Routine": 4724,
+    "Exceptional": 399,
+    "Unsupported": 1483
+   },
+   "storage": {
+    "Routine": 5647,
+    "Exceptional": 206,
+    "Unsupported": 753
+   },
+   "net_build": {
+    "Routine": 5064,
+    "Exceptional": 259,
+    "Unsupported": 1283
+   },
+   "throughput": {
+    "Routine": 4843,
+    "Exceptional": 415,
+    "Unsupported": 1348
+   },
+   "days_env": {
+    "Routine": 5647,
+    "Exceptional": 206,
+    "Unsupported": 753
+   },
+   "n_needing_build": 2237,
+   "binding_needers": {
+    "Routine": 400,
+    "Exceptional": 354,
+    "Unsupported": 1483
+   },
+   "n_new_action": 3188,
+   "n_moot": 3418,
+   "n_saa_ge_target": 884,
+   "binding_new_action": {
+    "Routine": 1452,
+    "Exceptional": 345,
+    "Unsupported": 1391
+   },
+   "n_maintenance": 1083,
+   "binding_maintenance": {
+    "Routine": 1080,
+    "Exceptional": 3,
+    "Unsupported": 0
+   },
+   "n_pilebuild": 2105,
+   "binding_pilebuild": {
+    "Routine": 372,
+    "Exceptional": 342,
+    "Unsupported": 1391
+   },
+   "frac_multi_month_p90_pilebuild": 0.6935866983372921,
+   "frac_multi_month_p90": 0.689316048278945,
+   "min_months_p90_median": 1.7551196260124722,
+   "min_months_p90_p90": 16.200581463921754
+  }
+ }
+}

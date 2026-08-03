@@ -1,0 +1,38 @@
+{
+  "buffer_bootstrap_report.json": {
+    "bytes": 14826,
+    "sha256": "e5ed3d2d662ef9dbd0390b66f0902194794e86cdf753c906e4cff95775ddbaf2"
+  },
+  "buffer_confirm_report.json": {
+    "bytes": 2432,
+    "sha256": "e9af94f6f67f3a3571891beee55add97af4baad34d14acd9d79a2fc82e0b35de"
+  },
+  "buffer_frontiers.json": {
+    "bytes": 2620,
+    "sha256": "c8762919cf008a26a2a5edb8b4f25bc8a1704be2234e5ba568d20a94ecd29765"
+  },
+  "gate2_diffs.json": {
+    "bytes": 3798,
+    "sha256": "4c5ff36391ce10f7d89b19ca9edf03517e5c1c211a1501bf5a77dac2daa63385"
+  },
+  "gate3_report.json": {
+    "bytes": 4104,
+    "sha256": "6b902f38b450999335e3734de8f5b1547f5cd84ecf0d09858efbfc9266d11886"
+  },
+  "gate_cost.json": {
+    "bytes": 435,
+    "sha256": "5c74db0b117462e0bcb0bd8e6b337d212c57d4c5d34ff93d0fa6696475776371"
+  },
+  "lag_sensitivity.json": {
+    "bytes": 938,
+    "sha256": "1697742180933be8366a89a6bcf2b40434478db6a543c93be69f6defa6f4a17c"
+  },
+  "operator_lp400.json": {
+    "bytes": 669,
+    "sha256": "4adf7582969efa542083bd97ad892a674fddecb09238364fcaa4a61127adbd96"
+  },
+  "synth_diag.out": {
+    "bytes": 755,
+    "sha256": "bc57673d43d4df65cf575e496d8c7bb7f4630ae366c03fe20ae347a9e622acc6"
+  }
+}

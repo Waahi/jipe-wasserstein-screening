@@ -1,0 +1,14 @@
+{
+  "units": 60,
+  "window": 48,
+  "alpha": 0.05,
+  "bootstrap_resamples": 6000,
+  "gate1_seconds": 4.0040999992925206e-05,
+  "gate2_seconds": 0.010445266666162448,
+  "gate3_seconds": 0.000877914999728091,
+  "gate4_solve_seconds": 0.01929086666738537,
+  "gate4_total_seconds": 0.05550386672499978,
+  "ratio_g4_over_g1": 1386.1758381360778,
+  "ratio_g4_over_g2": 5.313781686857756,
+  "ratio_g4_over_g3": 63.22236975355303
+}

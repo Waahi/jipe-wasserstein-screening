@@ -1,0 +1,5 @@
+r=0.0  N=96  M=20 : TAI=0.0127  dW1-glob=+0.0065  dbi-glob=+0.0008  dW1-bi=+0.0057  eps_share=0.36 eps_sd=0.035  (ES W1=0.0098 glob=0.0032 bi=0.0040)
+r=0.1  N=96  M=20 : TAI=0.0154  dW1-glob=+0.0061  dbi-glob=+0.0006  dW1-bi=+0.0055  eps_share=0.36 eps_sd=0.048  (ES W1=0.0096 glob=0.0035 bi=0.0040)
+r=0.25 N=96  M=20 : TAI=0.0367  dW1-glob=+0.0051  dbi-glob=+0.0002  dW1-bi=+0.0049  eps_share=0.34 eps_sd=0.046  (ES W1=0.0093 glob=0.0042 bi=0.0044)
+r=0.25 N=48  M=20 : TAI=0.0347  dW1-glob=+0.0058  dbi-glob=+0.0003  dW1-bi=+0.0054  eps_share=0.41 eps_sd=0.071  (ES W1=0.0099 glob=0.0041 bi=0.0045)
+r=0.25 N=24  M=20 : TAI=0.0357  dW1-glob=+0.0087  dbi-glob=+0.0006  dW1-bi=+0.0081  eps_share=0.38 eps_sd=0.071  (ES W1=0.0147 glob=0.0060 bi=0.0066)

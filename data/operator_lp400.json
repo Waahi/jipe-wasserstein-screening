@@ -1,0 +1,40 @@
+{
+  "seed": 20260726,
+  "tolerance": 1e-09,
+  "n_cases": 400,
+  "n_eps_zero": 57,
+  "n_where_whole_atom_differs": 233,
+  "max_abs_whole_minus_lp": 0.10000000000000003,
+  "max_abs_frac_minus_lp": 2.220446049250313e-16,
+  "worst_whole": {
+    "case": "regression: fractional final atom",
+    "k": 1.0,
+    "eps": 0.1,
+    "op": 0.2,
+    "lp": 0.30000000000000004
+  },
+  "families": [
+    "exponential",
+    "uniform",
+    "lognormal",
+    "integer",
+    "coarse"
+  ],
+  "n_range": [
+    8,
+    40
+  ],
+  "eps_grid": [
+    0.0,
+    0.01,
+    0.03,
+    0.1,
+    0.25,
+    0.6,
+    2.0
+  ],
+  "percentile_range": [
+    30,
+    90
+  ]
+}
